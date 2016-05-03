@@ -22,13 +22,13 @@ public class SurveyListPresenter implements SurveyListContract.UserActionsListen
     }
 
     @Override
-    public void loadSurveys(boolean forceUpdate) {
+    public void loadSurveys(String userId, boolean forceUpdate) {
         mView.setProgressIndicator(true);
 //        if (forceUpdate) {
 //            mRepository.refreshData();
 //        }
 
-        mRepository.surveys("", "", new SurveyRepository.SurveysCallback() {
+        mRepository.surveys(userId, "", new SurveyRepository.SurveysCallback() {
             @Override
             public void onSurveySuccess(List<Survey> surveys) {
                 mView.setProgressIndicator(false);

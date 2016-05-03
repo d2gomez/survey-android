@@ -5,6 +5,7 @@ import java.util.List;
 
 public class SurveyAnswer implements Serializable {
 
+    private String userId;
     private int surveyId;
     private List<Answer> answers;
     private UserData userData;
@@ -31,5 +32,13 @@ public class SurveyAnswer implements Serializable {
 
     public void setUserData(UserData userData) {
         this.userData = userData;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

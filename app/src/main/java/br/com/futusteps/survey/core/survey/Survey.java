@@ -32,4 +32,15 @@ public class Survey implements Serializable{
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if(o != null){
+            if(((Survey)o).getId() == this.getId()){
+                return true;
+            }
+        }
+        return false;
+    }
 }

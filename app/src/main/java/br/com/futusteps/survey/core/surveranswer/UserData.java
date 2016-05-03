@@ -9,8 +9,6 @@ public class UserData implements Serializable{
     private String phone;
     private int phoneType;
     private Float salary;
-    private int professionalClass;
-    private int profession;
 
     public String getCpf() {
         return cpf;
@@ -42,22 +40,6 @@ public class UserData implements Serializable{
 
     public void setSalary(Float salary) {
         this.salary = salary;
-    }
-
-    public int getProfessionalClass() {
-        return professionalClass;
-    }
-
-    public void setProfessionalClass(int professionalClass) {
-        this.professionalClass = professionalClass;
-    }
-
-    public int getProfession() {
-        return profession;
-    }
-
-    public void setProfession(int profession) {
-        this.profession = profession;
     }
 
     public int getPhoneType() {

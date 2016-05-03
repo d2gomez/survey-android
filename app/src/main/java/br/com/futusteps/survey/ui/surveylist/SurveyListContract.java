@@ -21,7 +21,7 @@ public class SurveyListContract {
 
     interface UserActionsListener {
 
-        void loadSurveys(boolean forceUpdate);
+        void loadSurveys(String userId, boolean forceUpdate);
 
         void startSurvey(@NonNull Survey requestedSurvey);
     }

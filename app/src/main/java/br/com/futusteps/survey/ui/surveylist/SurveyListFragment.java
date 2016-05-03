@@ -21,6 +21,7 @@ import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.R;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
+import br.com.futusteps.survey.data.repository.UserRepositories;
 import br.com.futusteps.survey.ui.base.BaseFragment;
 import br.com.futusteps.survey.ui.questions.QuestionsActivity;
 import butterknife.Bind;
@@ -66,7 +67,8 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
     @Override
     public void onResume() {
         super.onResume();
-        mActionsListener.loadSurveys(false);
+        String userId = UserRepositories.getInMemoryRepoInstance().getUser().getId();
+        mActionsListener.loadSurveys(userId, false);
     }
 
     @Override
@@ -95,7 +97,8 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                mActionsListener.loadSurveys(true);
+                String userId = UserRepositories.getInMemoryRepoInstance().getUser().getId();
+                mActionsListener.loadSurveys(userId, true);
             }
         });
         return root;
