@@ -13,8 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="br.com.futusteps.survey.ui.login.LoginActivity"
-            android:label="@string/title_activity_login">
+            android:name="br.com.futusteps.survey.ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +27,7 @@
         <activity
             android:name="br.com.futusteps.survey.ui.questions.QuestionsActivity"
             android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
