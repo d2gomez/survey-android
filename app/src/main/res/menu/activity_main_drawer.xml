@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stores"
+            android:icon="@drawable/ic_store"
+            android:enabled="false"
+            android:title="@string/new_survey" />
+        <item
+            android:id="@+id/nav_surveys"
+            android:icon="@drawable/ic_survey"
+            android:title="@string/surveys" />
+    </group>
+
+    <group android:checkableBehavior="none">
+            <item
+                android:id="@+id/nav_logoff"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logoff" />
+    </group>
+
+</menu>
