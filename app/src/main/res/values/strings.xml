@@ -27,21 +27,22 @@
     <string name="error_invalid_password">Invalid Password</string>
 
     <!-- Survey List -->
-    <string name="title_activity_survey">Survey List</string>
+    <string name="title_activity_survey">Surveys</string>
     <string name="questions">%s Questions</string>
     <string name="empty_surveys">There is no available survey</string>
     <string name="error_surveys">An error occurred. Please try again..</string>
 
 
     <!-- Survey Question -->
-    <string name="question">Question %s</string>
+    <string name="title_fragment_question">Question %s</string>
     <string name="next">Next</string>
     <string name="error_empty_answer">Please, insert an answer.</string>
     <string name="error_no_alternative">Please, choose an alternative.</string>
-    <string name="questions_leave_survey">Do you really want to leave?</string>
+    <string name="questions_leave_survey">Do you want to leave this survey?</string>
     <string name="action_leave">Finish</string>
 
     <!-- User Data Form -->
+    <string name="title_user_data_question">User Data</string>
     <string name="finish">Finish</string>
     <string name="cpf">Document</string>
     <string name="birth_date">Birth-date</string>

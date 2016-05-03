@@ -48,9 +48,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         dependencyInjection();
-        if(getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(getString(R.string.title_activity_login));
-        }
+        setActionBarTitle(R.string.title_activity_login);
         prepareView();
     }
 

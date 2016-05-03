@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -71,6 +72,18 @@ public abstract class BaseActivity extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
+        }
+    }
+
+    public void setActionBarTitle(@StringRes int title){
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
+    }
+
+    public void setActionBarTitle(String title){
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
         }
     }
 

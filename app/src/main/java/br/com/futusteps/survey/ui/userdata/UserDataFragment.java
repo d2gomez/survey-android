@@ -81,6 +81,8 @@ public class UserDataFragment extends BaseFragment implements UserDataContract.V
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dependencyInjection();
+
+        setActionBarTitle(getString(R.string.title_user_data_question));
     }
 
     @Nullable

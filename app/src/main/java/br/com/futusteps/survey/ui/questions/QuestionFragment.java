@@ -61,10 +61,11 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
         super.onCreate(savedInstanceState);
         mPosition = getArguments().getInt(PARAM_POSITION);
         mTotal = getArguments().getInt(PARAM_TOTAL);
-
         dependencyInjection();
 
         mQuestion = mRepository.getCurrentSurvey().getQuestions().get(mPosition);
+
+        setActionBarTitle(getString(R.string.title_fragment_question, mQuestion.getOrder()));
     }
 
     private void dependencyInjection() {

@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
+import br.com.futusteps.R;
 import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment {
@@ -60,6 +61,10 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    protected void setActionBarTitle(String title){
+        ((BaseActivity)getActivity()).setActionBarTitle(title);
     }
 
 }
