@@ -6,4 +6,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="first_key_line">16dp</dimen>
+    <dimen name="second_key_line">72dp</dimen>
+    <dimen name="toolbar_horizontal_padding">4dp</dimen>
+
 </resources>

@@ -28,7 +28,7 @@
     <string name="error_user_not_store">Apenas logista podem acessar o aplicativo</string>
 
     <!-- Survey List -->
-    <string name="title_activity_survey">Survey</string>
+    <string name="title_activity_survey">Survey List</string>
     <string name="questions">%s Questions</string>
     <string name="empty_surveys">Não nenhuma pesquisa cadastrada para o seu usuário, favor entre em contato com o Suporte.</string>
     <string name="error_surveys">Ocorreu um erro na consulta de pesquisa, por favor tente novamente.</string>

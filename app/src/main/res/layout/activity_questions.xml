@@ -8,4 +8,8 @@
     android:orientation="vertical"
     tools:context="br.com.futusteps.survey.ui.questions.QuestionsActivity">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
 </LinearLayout>

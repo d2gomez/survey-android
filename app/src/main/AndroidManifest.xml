@@ -23,11 +23,10 @@
         <activity
             android:name="br.com.futusteps.survey.MainActivity"
             android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/ThemeBarBackground" />
         <activity
             android:name="br.com.futusteps.survey.ui.questions.QuestionsActivity"
-            android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_survey" />
     </application>
 
 </manifest>

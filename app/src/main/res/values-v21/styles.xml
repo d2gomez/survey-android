@@ -1,9 +1,12 @@
 <resources>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="Spinner" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupTheme">@android:style/ThemeOverlay.Material.Light</item>
+        <item name="android:spinnerMode">dialog</item>
+    </style>
+
+    <style name="ThemeBarBackground" parent="AppTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
     </style>
 </resources>

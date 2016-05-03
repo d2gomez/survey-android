@@ -10,15 +10,28 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import br.com.futusteps.R;
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity extends AppCompatActivity{
+
+    protected Toolbar toolbar;
 
     protected void initFragment(@IdRes int container, Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.add(container, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void setContentView(int layoutResId) {
+        super.setContentView(layoutResId);
+        ButterKnife.bind(this);
+        prepareToolbar();
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
@@ -51,6 +64,13 @@ public abstract class BaseActivity extends AppCompatActivity{
             // and hide the relevant UI components.
             progressView.setVisibility(show ? View.VISIBLE : View.GONE);
             screenContainer.setVisibility(show ? View.GONE : View.VISIBLE);
+        }
+    }
+
+    private void prepareToolbar() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
         }
     }
 

@@ -16,7 +16,6 @@ import br.com.futusteps.survey.data.repository.UserRepositories;
 import br.com.futusteps.survey.data.repository.UserRepository;
 import br.com.futusteps.survey.ui.base.BaseActivity;
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -48,8 +47,10 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
         dependencyInjection();
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(getString(R.string.title_activity_login));
+        }
         prepareView();
     }
 

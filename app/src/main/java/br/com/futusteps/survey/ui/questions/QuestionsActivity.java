@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import br.com.futusteps.R;
 import br.com.futusteps.survey.core.survey.Survey;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.survey.ui.base.BaseActivity;
-import br.com.futusteps.R;
 import br.com.futusteps.survey.ui.view.Alert;
-import butterknife.ButterKnife;
 
 public class QuestionsActivity extends BaseActivity {
 
@@ -21,8 +20,7 @@ public class QuestionsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_survey);
-        ButterKnife.bind(this);
+        setContentView(R.layout.activity_questions);
 
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 //        getActionBar().setTitle(mSurvey.getName());
