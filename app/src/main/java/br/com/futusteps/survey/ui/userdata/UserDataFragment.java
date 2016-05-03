@@ -26,8 +26,6 @@ import butterknife.OnClick;
 
 public class UserDataFragment extends BaseFragment implements UserDataContract.View {
 
-    private static final CharSequence[] PHONE_TYPES = {"Celular", "Residencial"};
-
     @Bind(R.id.cpf)
     EditText cpfEdt;
 
@@ -100,8 +98,8 @@ public class UserDataFragment extends BaseFragment implements UserDataContract.V
 
     @Override
     public void showSubmitSurveyError(int errorCode) {
-        if(errorCode == UserDataContract.UserActionsListener.SURVEY_ERROR){
-            Toast.makeText(getContext(), R.string.survey_error, Toast.LENGTH_LONG).show();
+        if (errorCode == UserDataContract.UserActionsListener.SURVEY_ERROR) {
+            Toast.makeText(getContext(), R.string.error_surveys, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -139,11 +137,12 @@ public class UserDataFragment extends BaseFragment implements UserDataContract.V
 
     @Override
     public void showPhoneTypeDialog() {
+        final String[] types = getResources().getStringArray(R.array.phone_types);
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle(getString(R.string.select_type));
-        builder.setItems(PHONE_TYPES, new DialogInterface.OnClickListener() {
+        builder.setItems(types, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
-                phoneTypeEdt.setText(PHONE_TYPES[item]);
+                phoneTypeEdt.setText(types[item]);
             }
         });
         builder.create().show();
@@ -189,7 +188,7 @@ public class UserDataFragment extends BaseFragment implements UserDataContract.V
     @OnClick(R.id.finishButton)
     void clickButtonFinish() {
 
-        int phoneType = Arrays.asList(PHONE_TYPES).indexOf(phoneTypeEdt.getText().toString());
+        int phoneType = Arrays.asList(getResources().getStringArray(R.array.phone_types)).indexOf(phoneTypeEdt.getText().toString());
 
         actionsListener.submitSurvey(
                 cpfEdt.getText().toString(),

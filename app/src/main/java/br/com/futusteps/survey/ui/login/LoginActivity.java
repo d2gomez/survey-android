@@ -101,11 +101,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
 
     @Override
     public void showLoginError(String error) {
-        if(error.equalsIgnoreCase(LoginContract.UserActionsListener.USER_NOT_STORE)){
-            Toast.makeText(this, R.string.error_user_not_store, Toast.LENGTH_LONG).show();
-        }else {
-            Toast.makeText(this, error, Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(this, error, Toast.LENGTH_LONG).show();
     }
 
     @Override

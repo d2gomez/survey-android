@@ -36,8 +36,6 @@ public interface LoginContract {
 
     interface UserActionsListener {
 
-        String USER_NOT_STORE = "user_not_store";
-
         void login(String user, String pass, int provider);
 
         void createUser(String user, String pass, int provider);

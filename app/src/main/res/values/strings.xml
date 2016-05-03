@@ -7,63 +7,60 @@
     <string name="new_survey">New Survey</string>
     <string name="surveys">Surveys</string>
     <string name="logoff">Logoff</string>
-    <string name="drawer_logout_title">Deseja realmente sair da sua conta?</string>
+    <string name="drawer_logout_title">Do you want log-off your account?</string>
 
     <!-- Common -->
     <string name="OK">OK</string>
-    <string name="yes">Sim</string>
-    <string name="no">Não</string>
-    <string name="cancel">Cancelar</string>
-    <string name="leave">Sair</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="leave">Leave</string>
 
 
     <!-- Strings related to login -->
-    <string name="title_activity_login">Sign-in: Survey</string>
+    <string name="title_activity_login">Sign-in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign-in</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">Invalid Email</string>
     <string name="error_invalid_password">Invalid Password</string>
-    <string name="error_user_not_store">Apenas logista podem acessar o aplicativo</string>
 
     <!-- Survey List -->
     <string name="title_activity_survey">Survey List</string>
     <string name="questions">%s Questions</string>
-    <string name="empty_surveys">Não nenhuma pesquisa cadastrada para o seu usuário, favor entre em contato com o Suporte.</string>
-    <string name="error_surveys">Ocorreu um erro na consulta de pesquisa, por favor tente novamente.</string>
+    <string name="empty_surveys">There is no available survey</string>
+    <string name="error_surveys">An error occurred. Please try again..</string>
 
 
     <!-- Survey Question -->
     <string name="question">Question %s</string>
     <string name="next">Next</string>
-    <string name="error_empty_answer">Por favor, digite uma resposta.</string>
-    <string name="error_no_alternative">Por favor, escolha uma alternativa.</string>
-    <string name="questions_leave_survey">Deseja encerrar essa pesquisa?</string>
-    <string name="action_leave">Encerrar</string>
+    <string name="error_empty_answer">Please, insert an answer.</string>
+    <string name="error_no_alternative">Please, choose an alternative.</string>
+    <string name="questions_leave_survey">Do you really want to leave?</string>
+    <string name="action_leave">Finish</string>
 
     <!-- User Data Form -->
-    <string name="finish">Finalizar</string>
+    <string name="finish">Finish</string>
     <string name="cpf">Document</string>
-    <string name="birth_date">Data de Nascimento</string>
-    <string name="prefix">DDD</string>
-    <string name="phone">Telefone</string>
-    <string name="phone_type">Tipo</string>
-    <string name="salary">Salário</string>
-    <string name="professional_class">Classe Profissional</string>
-    <string name="profession">Profissão</string>
-    <string name="select_type">Selecione o tipo:</string>
-    <string name="select_class">Selecione a Classe:</string>
-    <string name="select_profession">Selecione a Profissão:</string>
-    <string name="leave_survey">Encerrar esta pesquisa?</string>
-    <string name="error_invalid_cpf">CPF inválido</string>
-    <string name="error_invalid_birth_date">Data inválida</string>
-    <string name="error_invalid_prefix">DDD inválido</string>
-    <string name="error_invalid_phone">Telefone inválido</string>
-    <string name="error_invalid_phone_type">Tipo inválido</string>
-    <string name="error_invalid_salary">Salário inválido</string>
-    <string name="finish_survey">Pesquisa Finalizada</string>
-    <string name="success_finish_survey">A pré-análise foi realizada com sucesso, o usuário possui um cartão pré-aprovado</string>
-    <string name="survey_error">Ocorreu um erro na pesquisa, por favor tente novamente.</string>
+    <string name="birth_date">Birth-date</string>
+    <string name="prefix">Prefix</string>
+    <string name="phone">Phone</string>
+    <string name="phone_type">Type</string>
+    <string name="salary">Salary</string>
+    <string name="select_type">Select a type:</string>
+    <string name="leave_survey">Leave survey?</string>
+    <string name="error_invalid_cpf">Invalid document</string>
+    <string name="error_invalid_birth_date">Invalid date</string>
+    <string name="error_invalid_prefix">Invalid prefix</string>
+    <string name="error_invalid_phone">Invalid phone</string>
+    <string name="error_invalid_phone_type">Invalid type</string>
+    <string name="error_invalid_salary">Invalid salary</string>
+    <string name="finish_survey">Survey completed</string>
+    <string name="success_finish_survey">This survey was successfully submitted.</string>
+
+    <string name="phone_home">Home</string>
+    <string name="phone_cell_phone">Cell Phone</string>
 
 </resources>
