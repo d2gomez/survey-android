@@ -1,6 +1,6 @@
 #Survey
 
-![Build Status](https://travis-ci.org/douglasmarques/survey-android.svg?branch=master)](https://travis-ci.org/douglasmarques/survey-android)
+[![Build Status](https://travis-ci.org/douglasmarques/survey-android.svg?branch=master)](https://travis-ci.org/douglasmarques/survey-android)
 
 ## Description
 
