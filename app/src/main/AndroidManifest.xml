@@ -28,6 +28,9 @@
             android:name="br.com.futusteps.survey.ui.questions.QuestionsActivity"
             android:windowSoftInputMode="adjustPan"
             android:label="@string/title_activity_survey" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c8f5c5349b58e0fa5472fc050b5bbf617bf26278" />
     </application>
 
 </manifest>
