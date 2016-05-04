@@ -96,6 +96,7 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
             EditText answer = new EditText(getContext());
             answer.setTag("text");
             answer.setLayoutParams(lParams);
+            answer.setHint(R.string.anser_hint);
 
             mAnswerLayout.addView(answer);
         } else if (question.getType().equals("single")) {

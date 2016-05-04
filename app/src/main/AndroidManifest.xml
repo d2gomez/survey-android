@@ -26,6 +26,7 @@
             android:theme="@style/ThemeBarBackground" />
         <activity
             android:name="br.com.futusteps.survey.ui.questions.QuestionsActivity"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/title_activity_survey" />
     </application>
 
