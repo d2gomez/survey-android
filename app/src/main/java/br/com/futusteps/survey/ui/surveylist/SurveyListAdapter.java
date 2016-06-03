@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.com.futusteps.survey.core.survey.Survey;
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 
 public class SurveyListAdapter extends RecyclerView.Adapter<SurveyListAdapter.ViewHolder> {
 

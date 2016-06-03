@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">132807543803719</string>
+    <string name="fabric_id">c8f5c5349b58e0fa5472fc050b5bbf617bf26278</string>
+    <string name="fb_login_protocol_scheme">132807543803719</string>
+</resources>

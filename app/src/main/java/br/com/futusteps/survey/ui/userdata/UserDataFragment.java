@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.Arrays;
 
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;

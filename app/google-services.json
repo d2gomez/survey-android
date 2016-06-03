@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "10359469921",
+    "firebase_url": "https://glaring-torch-1315.firebaseio.com",
+    "project_id": "glaring-torch-1315",
+    "storage_bucket": "glaring-torch-1315.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10359469921:android:fe573c2c5e443428",
+        "android_client_info": {
+          "package_name": "br.com.futusteps.survey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10359469921-guaosuh27kamol08rm5n5rh0nq0bj5cr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa4wT2Is8UPkxEiTn2P3-9v5Rxxc4UYFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

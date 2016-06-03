@@ -9,7 +9,7 @@ import com.firebase.client.FirebaseError;
 
 import java.util.Map;
 
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import br.com.futusteps.survey.SurveyApplication;
 import br.com.futusteps.survey.core.login.User;
 import br.com.futusteps.survey.data.repository.UserRepository;

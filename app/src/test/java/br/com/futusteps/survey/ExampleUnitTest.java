@@ -1,4 +1,4 @@
-package br.com.futusteps;
+package br.com.futusteps.survey;
 
 import org.junit.Test;
 

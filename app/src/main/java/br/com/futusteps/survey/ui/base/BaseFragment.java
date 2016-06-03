@@ -10,7 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment {

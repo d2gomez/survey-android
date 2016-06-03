@@ -6,7 +6,7 @@ import java.util.List;
 
 import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.survey.util.StringUtils;
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import br.com.futusteps.survey.core.survey.Question;
 
 public class QuestionPresenter implements QuestionContract.UserActionsListener{

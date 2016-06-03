@@ -18,7 +18,7 @@ import java.util.List;
 
 import br.com.futusteps.survey.core.survey.Survey;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.UserRepositories;

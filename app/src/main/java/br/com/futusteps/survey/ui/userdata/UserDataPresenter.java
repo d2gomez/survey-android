@@ -11,7 +11,7 @@ import br.com.futusteps.survey.util.DateUtils;
 import br.com.futusteps.survey.util.Masks;
 import br.com.futusteps.survey.util.StringUtils;
 import br.com.futusteps.survey.util.Validator;
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 
 public class UserDataPresenter implements UserDataContract.UserActionsListener{
 

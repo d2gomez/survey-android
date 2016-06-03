@@ -1,4 +1,4 @@
-package br.com.futusteps;
+package br.com.futusteps.survey;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

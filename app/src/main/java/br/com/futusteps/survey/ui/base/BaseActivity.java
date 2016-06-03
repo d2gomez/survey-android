@@ -14,7 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import br.com.futusteps.R;
+import br.com.futusteps.survey.R;
 import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity{

@@ -2,15 +2,12 @@ package br.com.futusteps.survey;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,11 +21,9 @@ import com.squareup.picasso.Transformation;
 
 import br.com.futusteps.survey.data.repository.UserRepositories;
 import br.com.futusteps.survey.data.repository.UserRepository;
+import br.com.futusteps.survey.ui.base.BaseActivity;
 import br.com.futusteps.survey.ui.login.LoginActivity;
 import br.com.futusteps.survey.ui.surveylist.SurveyListFragment;
-import br.com.futusteps.R;
-import br.com.futusteps.survey.data.remote.RemoteService;
-import br.com.futusteps.survey.ui.base.BaseActivity;
 import br.com.futusteps.survey.ui.view.Alert;
 import butterknife.Bind;
 import butterknife.ButterKnife;
