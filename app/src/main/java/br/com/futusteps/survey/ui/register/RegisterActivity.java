@@ -1,4 +1,4 @@
-package br.com.futusteps.survey.ui.login;
+package br.com.futusteps.survey.ui.register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,7 +40,7 @@ import butterknife.OnClick;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends BaseActivity implements LoginContract.View {
+public class RegisterActivity extends BaseActivity implements RegisterContract.View {
 
     @Bind(R.id.user_name)
     protected EditText userNameEdt;
@@ -60,7 +60,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
     @Bind(R.id.passwordTil)
     protected TextInputLayout passwordTil;
 
-    private LoginContract.UserActionsListener actionsListener;
+    private RegisterContract.UserActionsListener actionsListener;
 
     private CallbackManager callbackManager;
 
@@ -79,7 +79,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
 
     private void dependencyInjection() {
         UserRepository repository = UserRepositories.getInMemoryRepoInstance();
-        actionsListener = new LoginPresenter(this, repository);
+        actionsListener = new RegisterPresenter(this, repository);
     }
 
     private void prepareView() {
@@ -166,7 +166,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w("hfat - o is", "signInWithCredential", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -200,7 +200,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
     }
 
     @Override
-    public void showInvalidFieldErrors(LoginPresenter.ValidationLogin validation) {
+    public void showInvalidFieldErrors(RegisterPresenter.ValidationLogin validation) {
         switch (validation) {
             case USER_INVALID:
                 userTil.setError(getString(validation.mErrorMessage));
