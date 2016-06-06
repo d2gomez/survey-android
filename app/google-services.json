@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "10359469921-hc9odmnv9qfsob0uh8mo360kkjouhsa4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.futusteps.survey",
+            "certificate_hash": "C4A0D556DBB48F88F68FEB0C7D075DE031CAD360"
+          }
+        },
+        {
           "client_id": "10359469921-guaosuh27kamol08rm5n5rh0nq0bj5cr.apps.googleusercontent.com",
           "client_type": 3
         }

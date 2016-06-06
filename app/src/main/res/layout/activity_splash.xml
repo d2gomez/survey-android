@@ -3,15 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/white"
     tools:context=".ui.splash.SplashActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/ic_logo_splash"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/splash_description"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +33,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/colorPrimary"
+        android:background="@color/test"
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
@@ -28,24 +41,24 @@
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/signInBtn"
-            style="?android:textAppearanceSmall"
+            style="@style/Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Sign In"
-            android:background="@color/dark_blue"
+            android:background="@drawable/button_bg"
             android:layout_marginRight="8dp"
             android:layout_marginEnd="8dp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/registerBtn"
-            style="?android:textAppearanceSmall"
+            style="@style/Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Register"
-            android:background="@color/dark_blue"
+            android:background="@drawable/button_bg"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:textStyle="bold" />

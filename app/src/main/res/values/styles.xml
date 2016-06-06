@@ -52,4 +52,14 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="Button.Login.Facebook" parent="Button">
+        <item name="android:background">@drawable/button_facebook_bg</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button.Login.Google" parent="Button">
+        <item name="android:background">@drawable/button_google_bg</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>
