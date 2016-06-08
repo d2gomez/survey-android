@@ -16,17 +16,20 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ButterKnife.bind(this);
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
-    @OnClick(R.id.signInBtn)
-    public void doSignIn(){
-        startActivity(new Intent(this, LoginActivity.class));
-    }
-
-    @OnClick(R.id.registerBtn)
-    public void doRegistration(){
-        startActivity(new Intent(this, RegisterActivity.class));
-    }
+//    @OnClick(R.id.signInBtn)
+//    public void doSignIn(){
+//        startActivity(new Intent(this, LoginActivity.class));
+//    }
+//
+//    @OnClick(R.id.registerBtn)
+//    public void doRegistration(){
+//        startActivity(new Intent(this, RegisterActivity.class));
+//    }
 
 }
