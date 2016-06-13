@@ -18,6 +18,8 @@ package br.com.futusteps.survey.data.repository;
 
 import android.support.annotation.NonNull;
 
+import com.firebase.client.AuthData;
+
 import br.com.futusteps.survey.core.login.User;
 
 /**
@@ -33,7 +35,9 @@ public interface UserRepository {
     }
 
 
-    void login(@NonNull String user, @NonNull String password, int company, LoginCallback callback);
+    void login(@NonNull String user, @NonNull String password, LoginCallback callback);
+
+    void saveUser(User user);
 
     User getUser();
 

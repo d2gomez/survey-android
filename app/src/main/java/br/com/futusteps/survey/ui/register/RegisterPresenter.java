@@ -79,7 +79,7 @@ public class RegisterPresenter implements RegisterContract.UserActionsListener {
             mLoginView.showInvalidFieldErrors(ValidationLogin.PASS_INVALID);
         }else{
             mLoginView.showProgress(true);
-            mRepository.login(email, pass, provider, new UserRepository.LoginCallback() {
+            mRepository.login(email, pass, new UserRepository.LoginCallback() {
                 @Override
                 public void onLoginSuccess(User user) {
                     mLoginView.showMainScreen();

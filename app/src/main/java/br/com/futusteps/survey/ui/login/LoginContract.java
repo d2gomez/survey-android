@@ -16,6 +16,12 @@
 
 package br.com.futusteps.survey.ui.login;
 
+import android.app.Activity;
+
+import com.google.android.gms.common.api.GoogleApiClient;
+
+import br.com.futusteps.survey.ui.base.BasePresenter;
+
 /**
  * This specifies the contract between the view and the presenter.
  */
@@ -34,9 +40,13 @@ public interface LoginContract {
         void showProgress(final boolean show);
     }
 
-    interface UserActionsListener {
+    interface UserActionsListener extends BasePresenter{
 
-        void login(String user, String pass, int provider);
+        void login(String user, String pass);
+
+        void loginFacebook(Activity activity);
+
+        void loginGoogle(Activity activity, GoogleApiClient googleApiClient);
 
         void createUser(String user, String pass, int provider);
     }

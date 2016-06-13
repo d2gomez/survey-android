@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,8 +70,10 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
     @Override
     public void onResume() {
         super.onResume();
-        String userId = UserRepositories.getInMemoryRepoInstance().getUser().getId();
-        mActionsListener.loadSurveys(userId, false);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            mActionsListener.loadSurveys(user.getUid(), false);
+        }
     }
 
     @Override

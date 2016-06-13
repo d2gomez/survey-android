@@ -7,6 +7,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +17,9 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
@@ -67,13 +71,13 @@ public class MainActivity extends BaseActivity
         mNavigationView.setNavigationItemSelectedListener(this);
 
         TextView userName = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userName);
-        userName.setText(repository.getUser().getEmail());
+        //userName.setText(repository.getUser().getEmail());
 
         ImageView userImage = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userImage);
-        Picasso.with(this)
-                .load(repository.getUser().getProfileImageURL())
-                .transform(new CircleTransform())
-                .into(userImage);
+//        Picasso.with(this)
+//                .load(repository.getUser().getProfileImageURL())
+//                .transform(new CircleTransform())
+//                .into(userImage);
 
 
 
@@ -150,8 +154,16 @@ public class MainActivity extends BaseActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
-                        repository.logout();
-                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                        AuthUI.getInstance()
+                                .signOut(MainActivity.this)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        // user is now signed out
+                                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                                        finish();
+                                    }
+                                });
+
                     }
                 });
     }

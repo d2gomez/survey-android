@@ -1,12 +1,20 @@
 package br.com.futusteps.survey.ui.login;
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 
+import com.facebook.login.LoginManager;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Map;
 
 import br.com.futusteps.survey.R;
@@ -45,7 +53,6 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
         mRepository = repository;
     }
 
-
     @Override
     public void createUser(String user, String pass, int provider) {
 
@@ -69,7 +76,7 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
 
 
     @Override
-    public void login(String email, String pass, int provider) {
+    public void login(String email, String pass) {
 
         mLoginView.showProgress(true);
 
@@ -79,7 +86,7 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
             mLoginView.showInvalidFieldErrors(ValidationLogin.PASS_INVALID);
         }else{
             mLoginView.showProgress(true);
-            mRepository.login(email, pass, provider, new UserRepository.LoginCallback() {
+            mRepository.login(email, pass, new UserRepository.LoginCallback() {
                 @Override
                 public void onLoginSuccess(User user) {
                     mLoginView.showMainScreen();
@@ -92,5 +99,29 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
                 }
             });
         }
+    }
+
+    @Override
+    public void loginFacebook(Activity activity) {
+        mLoginView.showProgress(true);
+        Collection<String> permissions = Arrays.asList("public_profile", "email");
+        LoginManager.getInstance().logInWithReadPermissions(activity, permissions);
+    }
+
+    @Override
+    public void loginGoogle(Activity activity, GoogleApiClient googleApiClient) {
+        mLoginView.showProgress(true);
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+        activity.startActivityForResult(signInIntent, LoginActivity.RC_SIGN_IN);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void onStop() {
+
     }
 }

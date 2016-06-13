@@ -6,6 +6,7 @@ public class User {
     private String email;
     private String token;
     private String profileImageURL;
+    private String displayName;
 
     public String getId() {
         return id;
@@ -37,5 +38,13 @@ public class User {
 
     public void setProfileImageURL(String profileImageURL) {
         this.profileImageURL = profileImageURL;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 }

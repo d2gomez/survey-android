@@ -45,12 +45,12 @@ import butterknife.OnClick;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends BaseActivity implements LoginContract.View,
+public class LoginTempActivity extends BaseActivity implements LoginContract.View,
         GoogleApiClient.OnConnectionFailedListener {
 
     public static final int RC_SIGN_IN = 9001;
 
-    private static final String TAG = LoginActivity.class.getSimpleName();
+    private static final String TAG = LoginTempActivity.class.getSimpleName();
     @Bind(R.id.user_name)
     protected EditText userNameEdt;
 
@@ -150,7 +150,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View,
                     @Override
                     public void onError(FacebookException exception) {
                         Log.e("exception", exception.toString());
-                        Toast.makeText(LoginActivity.this, R.string.error_try_again,
+                        Toast.makeText(LoginTempActivity.this, R.string.error_try_again,
                                 Toast.LENGTH_LONG).show();
                     }
                 });
@@ -179,7 +179,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View,
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, R.string.error_auth,
+                            Toast.makeText(LoginTempActivity.this, R.string.error_auth,
                                     Toast.LENGTH_SHORT).show();
                             showMainScreen();
                         }else{
@@ -206,7 +206,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.View,
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, R.string.error_auth,
+                            Toast.makeText(LoginTempActivity.this, R.string.error_auth,
                                     Toast.LENGTH_SHORT).show();
                             showMainScreen();
                         }else{

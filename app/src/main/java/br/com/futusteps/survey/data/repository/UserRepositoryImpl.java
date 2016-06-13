@@ -4,6 +4,7 @@ package br.com.futusteps.survey.data.repository;
 import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.google.firebase.auth.FirebaseAuth;
 
 import br.com.futusteps.survey.SurveyApplication;
 import br.com.futusteps.survey.core.login.User;
@@ -14,7 +15,7 @@ public class UserRepositoryImpl implements UserRepository{
     private User mUser;
 
 
-    public void login(String email, String password, int provider, final LoginCallback callback){
+    public void login(String email, String password, final LoginCallback callback){
 
         Firebase ref = new Firebase(SurveyApplication.FIREBASE_URL);
         ref.authWithPassword(email, password, new Firebase.AuthResultHandler() {
@@ -36,11 +37,19 @@ public class UserRepositoryImpl implements UserRepository{
     }
 
     @Override
+    public void saveUser(User user) {
+        if(user != null){
+            mUser = user;
+        }
+    }
+
+    @Override
     public User getUser() {
         return mUser;
     }
 
     public void logout(){
+        FirebaseAuth.getInstance().signOut();
         mUser = null;
     }
 

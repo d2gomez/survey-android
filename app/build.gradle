@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
 apply plugin: 'realm-android'
 
@@ -40,10 +39,9 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.google.code.gson:gson:2.4'
-    compile 'com.firebase:firebase-client-android:2.5.2'
-    compile 'com.google.firebase:firebase-auth:9.0.0'
-    compile 'com.google.android.gms:play-services-auth:9.0.0'
 
+    compile 'com.firebaseui:firebase-ui-auth:0.4.1'
+    compile 'com.firebase:firebase-client-android:2.5.2'
 
     /**
      * Square Dependencies.
@@ -57,5 +55,4 @@ dependencies {
         transitive = true;
     }
 
-    compile 'com.facebook.android:facebook-android-sdk:4.+'
 }

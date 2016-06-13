@@ -69,5 +69,8 @@
     <string name="phone_home">Home</string>
     <string name="phone_cell_phone">Cell Phone</string>
     <string name="splash_description">A Simple way to create Surveys</string>
+    <string name="error_try_again">Please, try again.</string>
+    <string name="error_google_play">Google Play Services error.</string>
+    <string name="error_auth">Authentication failed.</string>
 
 </resources>
