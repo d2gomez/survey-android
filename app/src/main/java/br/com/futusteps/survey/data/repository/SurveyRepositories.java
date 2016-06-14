@@ -14,7 +14,7 @@ public class SurveyRepositories {
 
     public synchronized static SurveyRepository getInMemoryRepoInstance(@NonNull MockService service) {
         if (null == repository) {
-            repository = new SurveyRepositoryMockImpl(service);
+            repository = new SurveyRepositoryImpl(service);
         }
         return repository;
     }

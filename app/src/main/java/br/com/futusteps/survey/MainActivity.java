@@ -8,12 +8,14 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +28,7 @@ import com.squareup.picasso.Transformation;
 import br.com.futusteps.survey.data.repository.UserRepositories;
 import br.com.futusteps.survey.data.repository.UserRepository;
 import br.com.futusteps.survey.ui.base.BaseActivity;
+import br.com.futusteps.survey.ui.createsurvey.CreateSurveyActivity;
 import br.com.futusteps.survey.ui.login.LoginActivity;
 import br.com.futusteps.survey.ui.surveylist.SurveyListFragment;
 import br.com.futusteps.survey.ui.view.Alert;
@@ -43,6 +46,9 @@ public class MainActivity extends BaseActivity
 
     @Bind(R.id.nav_view)
     protected NavigationView mNavigationView;
+
+    @Bind(R.id.fab)
+    protected FloatingActionButton floatingActionButton;
 
     private UserRepository repository;
 
@@ -80,6 +86,12 @@ public class MainActivity extends BaseActivity
 //                .into(userImage);
 
 
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CreateSurveyActivity.class));
+            }
+        });
 
     }
 

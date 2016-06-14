@@ -18,13 +18,13 @@ import br.com.futusteps.survey.core.surveranswer.UserData;
 import br.com.futusteps.survey.core.survey.Survey;
 import br.com.futusteps.survey.data.remote.MockService;
 
-public class SurveyRepositoryMockImpl implements SurveyRepository {
+public class SurveyRepositoryImpl implements SurveyRepository {
 
     private final MockService mMockService;
     private Survey mCurrentSurvey;
     private SurveyAnswer mSurveyAnswer;
 
-    public SurveyRepositoryMockImpl(MockService mockService) {
+    public SurveyRepositoryImpl(MockService mockService) {
         mMockService = mockService;
     }
 
@@ -78,7 +78,7 @@ public class SurveyRepositoryMockImpl implements SurveyRepository {
 
             @Override
             public void onChildRemoved (DataSnapshot dataSnapshot){
-                callback.onSurveySuccess(null);
+                //callback.onSurveySuccess(null);
             }
 
             @Override
@@ -88,7 +88,7 @@ public class SurveyRepositoryMockImpl implements SurveyRepository {
 
             @Override
             public void onCancelled (FirebaseError firebaseError){
-                callback.onSurveySuccess(null);
+                //callback.onSurveySuccess(null);
             }
     }
 

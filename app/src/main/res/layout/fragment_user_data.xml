@@ -120,8 +120,7 @@
                     android:focusable="false"
                     android:hint="@string/phone_type"
                     android:inputType="textNoSuggestions"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
 
