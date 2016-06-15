@@ -22,9 +22,7 @@ public class NewSurveyPresenter implements NewSurveyContract.UserActionsListener
     }
 
     @Override
-    public void loadNextQuestion(Question question, int position, int total, String answer, List<Integer> alternatives) {
+    public void addQuestion(String surveyName, String surveyDescription) {
 
     }
-
-
 }

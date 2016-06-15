@@ -23,8 +23,8 @@ public class CreateQuestionFragment extends BaseFragment implements CreateQuesti
 
     private static final String PARAM_POSITION = "PARAM_POSITION";
 
-    private Question mQuestion;
-    private int mPosition;
+    private Question question;
+    private int position;
 
     private CreateQuestionContract.UserActionsListener mActionsListener;
     private SurveyRepository mRepository;
@@ -40,11 +40,10 @@ public class CreateQuestionFragment extends BaseFragment implements CreateQuesti
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPosition = getArguments().getInt(PARAM_POSITION);
+        position = getArguments().getInt(PARAM_POSITION);
         dependencyInjection();
 
-
-        setActionBarTitle("");
+        setActionBarTitle(getString(R.string.title_fragment_question, position + 1));
     }
 
     private void dependencyInjection() {
@@ -63,11 +62,13 @@ public class CreateQuestionFragment extends BaseFragment implements CreateQuesti
     }
 
     @Override
-    public void showQuestion(Question question) {
+    public void showAddAlternatives(boolean show) {
+
     }
 
     @Override
-    public void showNextQuestion(Question question, int position, int total) {
+    public void showAddOtherQuestion(Question question, int position, int total) {
+
     }
 
     @Override
@@ -75,8 +76,22 @@ public class CreateQuestionFragment extends BaseFragment implements CreateQuesti
         Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
     }
 
-    @OnClick(R.id.newQuestionButton)
-    protected void clickNextButton() {
+    @Override
+    public void showCreateSurveySuccess() {
+
+    }
+
+    @Override
+    public void showCreateSurveyFail() {
+
+    }
+
+    @OnClick(R.id.addOtherQuestionButton)
+    protected void clickAddOtherQuestionButton() {
+    }
+
+    @OnClick(R.id.finishButton)
+    protected void clickFinishButton() {
     }
 
 

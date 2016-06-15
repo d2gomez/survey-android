@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import br.com.futusteps.survey.R;
-import br.com.futusteps.survey.core.survey.Question;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
@@ -40,7 +39,7 @@ public class NewSurveyFragment extends BaseFragment implements NewSurveyContract
         dependencyInjection();
 
 
-        setActionBarTitle("Teste Mudar Nome");
+        setActionBarTitle(getString(R.string.survey_details));
     }
 
     private void dependencyInjection() {
@@ -58,13 +57,10 @@ public class NewSurveyFragment extends BaseFragment implements NewSurveyContract
         return view;
     }
 
-    @Override
-    public void showQuestion(Question question) {
-
-    }
 
     @Override
-    public void showNextQuestion(Question question, int position, int total) {
+    public void showAddQuestion() {
+
     }
 
     @Override
@@ -72,9 +68,9 @@ public class NewSurveyFragment extends BaseFragment implements NewSurveyContract
         Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
     }
 
-    @OnClick(R.id.nextButton)
+    @OnClick(R.id.addQuestionButton)
     protected void clickNextButton() {
-        replaceFragment(R.id.mainLayout, CreateQuestionFragment.newInstance(1));
+        replaceFragment(R.id.mainLayout, CreateQuestionFragment.newInstance(0));
 
     }
 

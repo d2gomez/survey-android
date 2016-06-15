@@ -10,15 +10,21 @@ public interface CreateQuestionContract {
 
     interface View {
 
-        void showQuestion(Question question);
+        void showAddAlternatives(boolean show);
 
-        void showNextQuestion(Question question, int position, int total);
+        void showAddOtherQuestion(Question question, int position, int total);
 
         void showValidationError(@StringRes int error);
+
+        void showCreateSurveySuccess();
+
+        void showCreateSurveyFail();
     }
 
     interface UserActionsListener {
 
-        void loadNextQuestion(Question question, int position, int total, String answer, List<Integer> alternatives);
+        void addOtherQuestion();
+
+        void finishSurvey();
     }
 }

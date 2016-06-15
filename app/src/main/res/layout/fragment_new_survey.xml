@@ -1,38 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/surveyNameLabel"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/surveyNameTil"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="@string/survey_name"/>
+        android:layout_height="wrap_content">
 
-    <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/surveyName"
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/surveyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/survey_name"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/surveyDescriptionTil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Nome da pesquisa"
-        android:layout_below="@+id/surveyNameLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="48dp" />
+        android:layout_below="@+id/surveyNameTil"
+        android:paddingTop="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/surveyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/survey_description"
+            android:inputType="textMultiLine"
+            android:scrollHorizontally="false"
+            android:lines="3"
+            android:maxLines="3" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/nextButton"
+        android:id="@+id/addQuestionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Question"
+        android:text="@string/add_question"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        style="@style/Button"
+        android:background="@drawable/button_bg"
         android:layout_alignParentEnd="true" />
-
-
 
 </RelativeLayout>
 

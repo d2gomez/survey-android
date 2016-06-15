@@ -51,13 +51,19 @@
     <!-- Splash -->
     <string name="splash_description">A Simple way to create Surveys</string>
 
-
     <!-- Common errors -->
     <string name="error_try_again">Please, try again.</string>
     <string name="error_google_play">Google Play Services error.</string>
 
+    <!-- New Survey -->
+    <string name="survey_name">Name</string>
+    <string name="survey_description">Description</string>
+    <string name="add_question">Add Question</string>
+    <string name="survey_details">Survey Details</string>
 
-    <!-- Create Survey -->
-    <string name="survey_name">Survey name</string>
+    <!-- Create Question -->
+    <string name="title_fragment_create_question">Question %d</string>
+    <string name="add_another_question">Add another Question</string>
+    <string name="finish">Finish</string>
 
 </resources>

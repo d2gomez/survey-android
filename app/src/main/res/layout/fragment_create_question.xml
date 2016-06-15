@@ -56,12 +56,11 @@
     </android.support.design.widget.TextInputLayout>
 
 
-
     <LinearLayout
         android:id="@+id/multipleAnswerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/nextButton"
+        android:layout_above="@+id/addOtherQuestionButton"
         android:layout_below="@+id/questionTypeTil"
         android:orientation="vertical">
 
@@ -84,22 +83,29 @@
     </LinearLayout>
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/newQuestionButton"
+        android:id="@+id/addOtherQuestionButton"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="New Question" />
+        android:background="@drawable/button_bg"
+        android:text="@string/add_another_question" />
 
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/finishButton"
+        style="@style/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="@string/finish"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Finish" />
+        android:layout_toLeftOf="@+id/addOtherQuestionButton"
+        android:layout_toStartOf="@+id/addOtherQuestionButton"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp" />
 
 </RelativeLayout>
 
