@@ -8,7 +8,6 @@ public class SurveyAnswer implements Serializable {
     private String userId;
     private int surveyId;
     private List<Answer> answers;
-    private UserData userData;
 
     public int getSurveyId() {
         return surveyId;
@@ -24,14 +23,6 @@ public class SurveyAnswer implements Serializable {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
-    }
-
-    public UserData getUserData() {
-        return userData;
-    }
-
-    public void setUserData(UserData userData) {
-        this.userData = userData;
     }
 
     public String getUserId() {

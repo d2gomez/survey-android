@@ -8,17 +8,13 @@ import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 
 import com.facebook.login.LoginManager;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Map;
 
 import br.com.futusteps.survey.R;
-import br.com.futusteps.survey.SurveyApplication;
 import br.com.futusteps.survey.core.login.User;
 import br.com.futusteps.survey.data.repository.UserRepository;
 import br.com.futusteps.survey.util.Validator;
@@ -59,19 +55,19 @@ public class LoginPresenter implements LoginContract.UserActionsListener {
         mLoginView.showProgress(true);
 
         // move to repository
-        Firebase ref = new Firebase(SurveyApplication.FIREBASE_URL);
-        ref.createUser(user, pass, new Firebase.ValueResultHandler<Map<String, Object>>() {
-            @Override
-            public void onSuccess(Map<String, Object> result) {
-                mLoginView.showMainScreen();
-            }
-
-            @Override
-            public void onError(FirebaseError firebaseError) {
-                mLoginView.showProgress(false);
-                mLoginView.showLoginError(firebaseError.getMessage());
-            }
-        });
+//        Firebase ref = new Firebase(SurveyApplication.FIREBASE_URL);
+//        ref.createUser(user, pass, new Firebase.ValueResultHandler<Map<String, Object>>() {
+//            @Override
+//            public void onSuccess(Map<String, Object> result) {
+//                mLoginView.showMainScreen();
+//            }
+//
+//            @Override
+//            public void onError(FirebaseError firebaseError) {
+//                mLoginView.showProgress(false);
+//                mLoginView.showLoginError(firebaseError.getMessage());
+//            }
+//        });
     }
 
 

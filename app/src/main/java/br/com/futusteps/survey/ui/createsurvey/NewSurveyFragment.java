@@ -9,21 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import br.com.futusteps.survey.R;
-import br.com.futusteps.survey.core.survey.Alternative;
 import br.com.futusteps.survey.core.survey.Question;
 import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.survey.ui.base.BaseFragment;
-import br.com.futusteps.survey.ui.userdata.UserDataFragment;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -72,11 +65,6 @@ public class NewSurveyFragment extends BaseFragment implements NewSurveyContract
 
     @Override
     public void showNextQuestion(Question question, int position, int total) {
-    }
-
-    @Override
-    public void showUserDataForm() {
-        replaceFragment(R.id.mainLayout, UserDataFragment.newInstance());
     }
 
     @Override

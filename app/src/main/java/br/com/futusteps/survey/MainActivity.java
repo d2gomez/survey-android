@@ -30,6 +30,7 @@ import br.com.futusteps.survey.data.repository.UserRepository;
 import br.com.futusteps.survey.ui.base.BaseActivity;
 import br.com.futusteps.survey.ui.createsurvey.CreateSurveyActivity;
 import br.com.futusteps.survey.ui.login.LoginActivity;
+import br.com.futusteps.survey.ui.splash.SplashActivity;
 import br.com.futusteps.survey.ui.surveylist.SurveyListFragment;
 import br.com.futusteps.survey.ui.view.Alert;
 import butterknife.Bind;
@@ -171,7 +172,7 @@ public class MainActivity extends BaseActivity
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         // user is now signed out
-                                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                                        startActivity(new Intent(MainActivity.this, SplashActivity.class));
                                         finish();
                                     }
                                 });

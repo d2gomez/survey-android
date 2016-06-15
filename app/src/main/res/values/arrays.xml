@@ -1,8 +1,5 @@
 <resources>
 
-    <string-array name="phone_types">
-        <item>@string/phone_home</item>
-        <item>@string/phone_cell_phone</item>
-    </string-array>
+
 
 </resources>

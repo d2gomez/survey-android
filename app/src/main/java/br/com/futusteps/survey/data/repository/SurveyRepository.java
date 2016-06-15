@@ -20,7 +20,6 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import br.com.futusteps.survey.core.surveranswer.UserData;
 import br.com.futusteps.survey.core.survey.Survey;
 import br.com.futusteps.survey.core.surveranswer.SurveyAnswer;
 
@@ -55,8 +54,6 @@ public interface SurveyRepository {
     Survey getCurrentSurvey();
 
     SurveyAnswer getSurveyAnswer();
-
-    void setUserData(UserData userData);
 
     void finishSurvey(FinishSurveysCallback callback);
 }

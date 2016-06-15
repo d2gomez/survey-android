@@ -52,7 +52,11 @@ public class SurveyListAdapter extends RecyclerView.Adapter<SurveyListAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return mSurveys.size();
+        if(mSurveys == null){
+            return 0;
+        }else {
+            return mSurveys.size();
+        }
     }
 
     public Survey getItem(int position) {

@@ -27,7 +27,7 @@
     <string name="error_invalid_password">Invalid Password</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
-
+    <string name="error_auth">Authentication failed.</string>
 
 
     <!-- Survey List -->
@@ -38,39 +38,26 @@
 
 
     <!-- Survey Question -->
-    <string name="title_fragment_question">Question %i</string>
+    <string name="title_fragment_question">Question %d</string>
     <string name="next">Next</string>
     <string name="error_empty_answer">Please, insert an answer.</string>
     <string name="error_no_alternative">Please, choose an alternative.</string>
     <string name="questions_leave_survey">Do you want to leave this survey?</string>
     <string name="action_leave">Finish</string>
-    <string name="anser_hint">Insert your answer</string>
-
-    <!-- User Data Form -->
-    <string name="title_user_data_question">User Data</string>
-    <string name="finish">Finish</string>
-    <string name="cpf">Document</string>
-    <string name="birth_date">Birth-date</string>
-    <string name="prefix">Prefix</string>
-    <string name="phone">Phone</string>
-    <string name="phone_type">Type</string>
-    <string name="salary">Salary</string>
-    <string name="select_type">Select a type:</string>
-    <string name="leave_survey">Leave survey?</string>
-    <string name="error_invalid_cpf">Invalid document</string>
-    <string name="error_invalid_birth_date">Invalid date</string>
-    <string name="error_invalid_prefix">Invalid prefix</string>
-    <string name="error_invalid_phone">Invalid phone</string>
-    <string name="error_invalid_phone_type">Invalid type</string>
-    <string name="error_invalid_salary">Invalid salary</string>
+    <string name="answer_hint">Insert your answer</string>
     <string name="finish_survey">Survey completed</string>
     <string name="success_finish_survey">This survey was successfully submitted.</string>
 
-    <string name="phone_home">Home</string>
-    <string name="phone_cell_phone">Cell Phone</string>
+    <!-- Splash -->
     <string name="splash_description">A Simple way to create Surveys</string>
+
+
+    <!-- Common errors -->
     <string name="error_try_again">Please, try again.</string>
     <string name="error_google_play">Google Play Services error.</string>
-    <string name="error_auth">Authentication failed.</string>
+
+
+    <!-- Create Survey -->
+    <string name="survey_name">Survey name</string>
 
 </resources>

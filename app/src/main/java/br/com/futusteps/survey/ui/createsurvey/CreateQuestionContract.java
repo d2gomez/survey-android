@@ -14,8 +14,6 @@ public interface CreateQuestionContract {
 
         void showNextQuestion(Question question, int position, int total);
 
-        void showUserDataForm();
-
         void showValidationError(@StringRes int error);
     }
 

@@ -13,13 +13,20 @@ public interface QuestionContract {
 
         void showNextQuestion(Question question, int position, int total);
 
-        void showUserDataForm();
+        void showSubmitSurveySuccess();
+
+        void showSubmitSurveyError(int errorCode);
 
         void showValidationError(@StringRes int error);
+
+        void showProgress(boolean show);
     }
 
     interface UserActionsListener {
 
+        int SUBMIT_SURVEY_ERROR = 1;
+
         void loadNextQuestion(Question question, int position, int total, String answer, List<Integer> alternatives);
+
     }
 }

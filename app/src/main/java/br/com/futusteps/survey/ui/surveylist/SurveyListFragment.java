@@ -102,8 +102,10 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                String userId = UserRepositories.getInMemoryRepoInstance().getUser().getId();
-                mActionsListener.loadSurveys(userId, true);
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if(user != null){
+                    mActionsListener.loadSurveys(user.getUid(), true);
+                }
             }
         });
         return root;
@@ -126,7 +128,7 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
 
     @Override
     public void showSurveys(List<Survey> surveys) {
-        if(surveys == null || surveys.isEmpty()){
+        if(getContext() != null && surveys == null || surveys.isEmpty()){
             empty.setVisibility(View.VISIBLE);
         }else{
             empty.setVisibility(View.GONE);
@@ -142,7 +144,9 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
 
     @Override
     public void showError() {
-        Toast.makeText(getContext(), R.string.error_surveys, Toast.LENGTH_LONG).show();
+        if(getContext() != null) {
+            Toast.makeText(getContext(), R.string.error_surveys, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void dependencyInjection() {

@@ -38,6 +38,7 @@ public class SurveyListPresenter implements SurveyListContract.UserActionsListen
             @Override
             public void onSurveyFail() {
                 mView.setProgressIndicator(false);
+                mView.showSurveys(null);
                 mView.showError();
             }
         });

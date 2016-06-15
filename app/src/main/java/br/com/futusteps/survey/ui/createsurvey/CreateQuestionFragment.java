@@ -16,7 +16,6 @@ import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.survey.ui.base.BaseFragment;
-import br.com.futusteps.survey.ui.userdata.UserDataFragment;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -69,11 +68,6 @@ public class CreateQuestionFragment extends BaseFragment implements CreateQuesti
 
     @Override
     public void showNextQuestion(Question question, int position, int total) {
-    }
-
-    @Override
-    public void showUserDataForm() {
-        replaceFragment(R.id.mainLayout, UserDataFragment.newInstance());
     }
 
     @Override

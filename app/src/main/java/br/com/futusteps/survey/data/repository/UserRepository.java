@@ -18,8 +18,6 @@ package br.com.futusteps.survey.data.repository;
 
 import android.support.annotation.NonNull;
 
-import com.firebase.client.AuthData;
-
 import br.com.futusteps.survey.core.login.User;
 
 /**

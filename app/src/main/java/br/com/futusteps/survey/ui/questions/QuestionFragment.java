@@ -1,5 +1,6 @@
 package br.com.futusteps.survey.ui.questions;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
@@ -24,7 +25,7 @@ import br.com.futusteps.survey.data.remote.MockService;
 import br.com.futusteps.survey.data.repository.SurveyRepositories;
 import br.com.futusteps.survey.data.repository.SurveyRepository;
 import br.com.futusteps.survey.ui.base.BaseFragment;
-import br.com.futusteps.survey.ui.userdata.UserDataFragment;
+import br.com.futusteps.survey.ui.view.Alert;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -37,6 +38,12 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
     private Question mQuestion;
     private int mPosition;
     private int mTotal;
+
+    @Bind(R.id.mainContainer)
+    protected View mainContainer;
+
+    @Bind(R.id.progress)
+    protected View progress;
 
     @Bind(R.id.answerLayout)
     protected LinearLayout mAnswerLayout;
@@ -96,7 +103,7 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
             EditText answer = new EditText(getContext());
             answer.setTag("text");
             answer.setLayoutParams(lParams);
-            answer.setHint(R.string.anser_hint);
+            answer.setHint(R.string.answer_hint);
 
             mAnswerLayout.addView(answer);
         } else if (question.getType().equals("single")) {
@@ -125,8 +132,23 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
     }
 
     @Override
-    public void showUserDataForm() {
-        replaceFragment(R.id.mainLayout, UserDataFragment.newInstance());
+    public void showSubmitSurveySuccess() {
+        Alert.showMessage(getContext(),
+                getString(R.string.finish_survey),
+                getString(R.string.success_finish_survey),
+                getString(R.string.OK), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getActivity().finish();
+                    }
+                });
+    }
+
+    @Override
+    public void showSubmitSurveyError(int errorCode) {
+        if (errorCode == QuestionContract.UserActionsListener.SUBMIT_SURVEY_ERROR) {
+            Toast.makeText(getContext(), R.string.error_surveys, Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -140,11 +162,11 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
             EditText editText = (EditText) mAnswerLayout.findViewWithTag("text");
 
             mActionsListener.loadNextQuestion(
-                                            mQuestion,
-                                            mPosition,
-                                            mTotal,
-                                            editText.getText().toString(),
-                                            null);
+                    mQuestion,
+                    mPosition,
+                    mTotal,
+                    editText.getText().toString(),
+                    null);
         } else if (mQuestion.getType().equals("single")) {
             RadioGroup radioGroup = (RadioGroup) mAnswerLayout.findViewWithTag("single");
             final Integer selectedAlt = radioGroup.getCheckedRadioButtonId();
@@ -153,9 +175,16 @@ public class QuestionFragment extends BaseFragment implements QuestionContract.V
                     mPosition,
                     mTotal,
                     null,
-                    new ArrayList<Integer>(){{add(selectedAlt);}});
+                    new ArrayList<Integer>() {{
+                        add(selectedAlt);
+                    }});
 
         }
+    }
+
+    @Override
+    public void showProgress(boolean show) {
+        showProgress(show, mainContainer, progress);
     }
 
 
