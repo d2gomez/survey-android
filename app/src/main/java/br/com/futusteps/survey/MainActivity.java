@@ -22,6 +22,8 @@ import android.widget.TextView;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
@@ -33,6 +35,7 @@ import br.com.futusteps.survey.ui.login.LoginActivity;
 import br.com.futusteps.survey.ui.splash.SplashActivity;
 import br.com.futusteps.survey.ui.surveylist.SurveyListFragment;
 import br.com.futusteps.survey.ui.view.Alert;
+import br.com.futusteps.survey.util.StringUtils;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -77,15 +80,25 @@ public class MainActivity extends BaseActivity
 
         mNavigationView.setNavigationItemSelectedListener(this);
 
-        TextView userName = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userName);
-        //userName.setText(repository.getUser().getEmail());
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            TextView userName = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userName);
+            TextView email = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.email);
+            if(StringUtils.isNotBlank(user.getDisplayName())){
+                userName.setText(user.getDisplayName());
+            }
+            if(StringUtils.isNotBlank(user.getEmail())){
+                email.setText(user.getEmail());
+            }
 
-        ImageView userImage = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userImage);
-//        Picasso.with(this)
-//                .load(repository.getUser().getProfileImageURL())
-//                .transform(new CircleTransform())
-//                .into(userImage);
-
+            if(user.getPhotoUrl() != null){
+                ImageView userImage = ButterKnife.findById(mNavigationView.getHeaderView(0), R.id.userImage);
+                Picasso.with(this)
+                        .load(user.getPhotoUrl())
+                        .transform(new CircleTransform())
+                        .into(userImage);
+            }
+        }
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

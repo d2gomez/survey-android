@@ -128,7 +128,10 @@ public class SurveyListFragment extends BaseFragment implements SurveyListContra
 
     @Override
     public void showSurveys(List<Survey> surveys) {
-        if(getContext() != null && surveys == null || surveys.isEmpty()){
+        if(getContext() == null){
+            return;
+        }
+        if(surveys == null || surveys.isEmpty()){
             empty.setVisibility(View.VISIBLE);
         }else{
             empty.setVisibility(View.GONE);

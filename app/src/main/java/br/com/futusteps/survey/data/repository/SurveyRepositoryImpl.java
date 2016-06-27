@@ -38,7 +38,7 @@ public class SurveyRepositoryImpl implements SurveyRepository {
             @Override
             public void onDataChange(final DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() == null) {
-                    callback.onSurveyFail();
+                    callback.onSurveySuccess(surveys);
                 }else{
                     ref.child(id).addChildEventListener(new ChildEventListener() {
                         @Override
